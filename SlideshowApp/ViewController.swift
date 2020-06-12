@@ -74,12 +74,16 @@ class ViewController: UIViewController {
         self.timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(updateTimer(_:)), userInfo: nil, repeats: true)
 
             switchB.setTitle("停止", for: .normal)
+            nextB.isEnabled = false
+            backB.isEnabled = false
             
         } else if self.timer != nil {
             self.timer.invalidate()
             self.timer = nil
 
             switchB.setTitle("再生", for: .normal)
+            nextB.isEnabled = true
+            backB.isEnabled = true
                   
         
         }
