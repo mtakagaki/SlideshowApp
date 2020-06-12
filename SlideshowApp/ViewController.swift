@@ -84,11 +84,23 @@ class ViewController: UIViewController {
             switchB.setTitle("再生", for: .normal)
             nextB.isEnabled = true
             backB.isEnabled = true
-                  
-        
         }
     }
     
-  
+    @IBAction func zoom(_ sender: Any) {
+        self.performSegue(withIdentifier: "toZoomIn", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            let NextViewController:NextViewController = segue.destination as! NextViewController
+            let name = imageNameArray[imageIndex]
+            let image = UIImage(named: name)
+            
+            NextViewController.selectedImg = image
+        }
+    
+     @IBAction func unwind(_ segue: UIStoryboardSegue) {
+    }
+    
 }
 
