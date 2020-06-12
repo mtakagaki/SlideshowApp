@@ -16,21 +16,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UIh-rg-sqZ">
-                                <rect key="frame" x="57" y="244" width="300" height="150"/>
+                                <rect key="frame" x="57" y="144" width="300" height="400"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="Nfi-52-EeW"/>
+                                    <constraint firstAttribute="height" constant="400" id="Nfi-52-EeW"/>
                                     <constraint firstAttribute="width" constant="300" id="PPU-Ar-sn8"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="top" spacing="74" translatesAutoresizingMaskIntoConstraints="NO" id="Zve-TB-d5Z">
-                                <rect key="frame" x="47.5" y="544" width="319" height="36"/>
+                                <rect key="frame" x="71.5" y="694" width="271" height="36"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Elg-aO-aS5">
                                         <rect key="frame" x="0.0" y="0.0" width="41" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="進む"/>
                                         <connections>
-                                            <action selector="nextButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gZW-Vu-Z6h"/>
+                                            <action selector="nextButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tLN-Qw-FzY"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eu6-QA-Bbt">
@@ -38,13 +38,16 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="戻る"/>
                                         <connections>
-                                            <action selector="backButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bcu-QN-uZL"/>
+                                            <action selector="backButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xff-Sc-CuM"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ziG-8i-ISA">
-                                        <rect key="frame" x="230" y="0.0" width="89" height="36"/>
+                                        <rect key="frame" x="230" y="0.0" width="41" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <state key="normal" title="再生/停止"/>
+                                        <state key="normal" title="再生"/>
+                                        <connections>
+                                            <action selector="switchButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CJt-Ok-ygq"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -52,7 +55,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="UIh-rg-sqZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AOU-ph-sfo"/>
-                            <constraint firstItem="UIh-rg-sqZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="YFG-Ul-4HY"/>
+                            <constraint firstItem="UIh-rg-sqZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="YFG-Ul-4HY"/>
                             <constraint firstItem="Zve-TB-d5Z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iG5-Ub-KqE"/>
                             <constraint firstItem="Zve-TB-d5Z" firstAttribute="top" secondItem="UIh-rg-sqZ" secondAttribute="bottom" constant="150" id="w4K-wd-US0"/>
                         </constraints>
@@ -60,6 +63,9 @@
                     </view>
                     <connections>
                         <outlet property="UIImageView" destination="UIh-rg-sqZ" id="vAi-Cf-6cm"/>
+                        <outlet property="backB" destination="Eu6-QA-Bbt" id="fWV-2J-rvB"/>
+                        <outlet property="nextB" destination="Elg-aO-aS5" id="Ll5-tg-UlA"/>
+                        <outlet property="switchB" destination="ziG-8i-ISA" id="vMd-DU-f2u"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

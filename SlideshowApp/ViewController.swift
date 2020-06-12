@@ -15,6 +15,18 @@ class ViewController: UIViewController {
     var imageIndex = 0
     var timer: Timer!
     
+    
+    
+    @objc func updateTimer(_ timer: Timer) {
+        if imageIndex < imageNameArray.count - 1 {
+            imageIndex += 1
+            displayImage()
+        } else {
+            imageIndex = 0
+            displayImage()
+        }
+    }
+    
     let imageNameArray = ["dog.JPG","dog2.JPG","dog3.JPG"]
     
     func displayImage() {
@@ -30,9 +42,15 @@ class ViewController: UIViewController {
 
         UIImageView.image = image
     }
+
     
-
-
+    @IBOutlet weak var nextB: UIButton!
+    
+    @IBOutlet weak var backB: UIButton!
+    
+    @IBOutlet weak var switchB: UIButton!
+    
+    
     @IBAction func nextButton(_ sender: Any) {
         if imageIndex == 2 {
                   imageIndex = 0
@@ -52,6 +70,19 @@ class ViewController: UIViewController {
     }
     
     @IBAction func switchButton(_ sender: Any) {
+        if self.timer == nil {
+        self.timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(updateTimer(_:)), userInfo: nil, repeats: true)
+
+            switchB.setTitle("停止", for: .normal)
+            
+        } else if self.timer != nil {
+            self.timer.invalidate()
+            self.timer = nil
+
+            switchB.setTitle("再生", for: .normal)
+                  
+        
+        }
     }
     
   
