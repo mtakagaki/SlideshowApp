@@ -53,10 +53,10 @@ class ViewController: UIViewController {
     
     @IBAction func nextButton(_ sender: Any) {
         if imageIndex == 2 {
-                  imageIndex = 0
-              } else {
-                  imageIndex += 1
-              }
+            imageIndex = 0
+        } else {
+            imageIndex += 1
+        }
         displayImage()
     }
     
@@ -92,14 +92,13 @@ class ViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            let NextViewController:NextViewController = segue.destination as! NextViewController
-            let name = imageNameArray[imageIndex]
-            let image = UIImage(named: name)
-            
-            NextViewController.selectedImg = image
+        let NextViewController:NextViewController = segue.destination as! NextViewController
+        let name = imageNameArray[imageIndex]
+        let image = UIImage(named: name)
+        NextViewController.selectedImg = image
         }
     
-     @IBAction func unwind(_ segue: UIStoryboardSegue) {
+    @IBAction func unwind(_ segue: UIStoryboardSegue) {
     }
     
 }
