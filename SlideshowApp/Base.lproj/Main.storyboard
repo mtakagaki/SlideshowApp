@@ -15,19 +15,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UIh-rg-sqZ">
-                                <rect key="frame" x="57" y="144" width="300" height="400"/>
-                                <gestureRecognizers/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="400" id="Nfi-52-EeW"/>
-                                    <constraint firstAttribute="width" constant="300" id="PPU-Ar-sn8"/>
-                                </constraints>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="t9l-D5-fp1" appends="YES" id="zea-JO-1Bj"/>
-                                </connections>
-                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="top" spacing="74" translatesAutoresizingMaskIntoConstraints="NO" id="Zve-TB-d5Z">
-                                <rect key="frame" x="71.5" y="694" width="271" height="36"/>
+                                <rect key="frame" x="71.5" y="626" width="271" height="36"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Elg-aO-aS5">
                                         <rect key="frame" x="0.0" y="0.0" width="41" height="36"/>
@@ -55,13 +44,23 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UIh-rg-sqZ">
+                                <rect key="frame" x="60" y="144" width="294" height="382"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="t9l-D5-fp1" appends="YES" id="zea-JO-1Bj"/>
+                                </connections>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="UIh-rg-sqZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AOU-ph-sfo"/>
-                            <constraint firstItem="UIh-rg-sqZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="YFG-Ul-4HY"/>
-                            <constraint firstItem="Zve-TB-d5Z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iG5-Ub-KqE"/>
-                            <constraint firstItem="Zve-TB-d5Z" firstAttribute="top" secondItem="UIh-rg-sqZ" secondAttribute="bottom" constant="150" id="w4K-wd-US0"/>
+                            <constraint firstItem="Zve-TB-d5Z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TPZ-7u-WaX"/>
+                            <constraint firstItem="UIh-rg-sqZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="YdE-qC-IEw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Zve-TB-d5Z" secondAttribute="bottom" constant="200" id="Zjo-ut-Jwp"/>
+                            <constraint firstItem="UIh-rg-sqZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="aP2-wQ-eVg"/>
+                            <constraint firstItem="Zve-TB-d5Z" firstAttribute="top" secondItem="UIh-rg-sqZ" secondAttribute="bottom" constant="100" id="gLM-wl-h9n"/>
+                            <constraint firstItem="UIh-rg-sqZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vGh-zP-uvj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UIh-rg-sqZ" secondAttribute="trailing" constant="60" id="zKk-Kx-i5Y"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -80,7 +79,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="139" y="119"/>
+            <point key="canvasLocation" x="137.68115942028987" y="118.52678571428571"/>
         </scene>
         <!--Next View Controller-->
         <scene sceneID="06c-ue-DKj">

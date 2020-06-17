@@ -71,7 +71,7 @@ class ViewController: UIViewController {
     
     @IBAction func switchButton(_ sender: Any) {
         if self.timer == nil {
-        self.timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(updateTimer(_:)), userInfo: nil, repeats: true)
+            self.timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(updateTimer(_:)), userInfo: nil, repeats: true)
 
             switchB.setTitle("停止", for: .normal)
             nextB.isEnabled = false
@@ -89,6 +89,16 @@ class ViewController: UIViewController {
     
     @IBAction func zoom(_ sender: Any) {
         self.performSegue(withIdentifier: "toZoomIn", sender: nil)
+        
+        if self.timer != nil {
+           self.timer.invalidate()
+           self.timer = nil
+            
+           switchB.setTitle("再生", for: .normal)
+           nextB.isEnabled = true
+           backB.isEnabled = true
+        }
+
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
